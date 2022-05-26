@@ -1,0 +1,56 @@
+ Transaction Error 
+execution error code 1101: [Error Code: 1101] cadence runtime error Execution failed:
+error: cannot find declaration `MyNFTContract` in `f8d6e0586b0a20c7.MyNFTContract`
+ --> cf2a9a96a85804557a8d2c81534d470d3dd03b60aa871c8f51e970064ac46071:1:7
+  |
+1 | import MyNFTContract from 0xf8d6e0586b0a20c7
+  |        ^^^^^^^^^^^^^ available exported declarations are:
+
+
+error: ambiguous restricted type
+ --> cf2a9a96a85804557a8d2c81534d470d3dd03b60aa871c8f51e970064ac46071:4:18
+  |
+4 | let receiverRef: &{MyNFTContract.NFTReceiver}
+  |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: ambiguous restricted type
+ --> cf2a9a96a85804557a8d2c81534d470d3dd03b60aa871c8f51e970064ac46071:8:39
+  |
+8 | self.receiverRef = acct.getCapability<&{MyNFTContract.NFTReceiver}>(/public/NFTReceiver)
+  |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: cannot infer type parameter: `T`
+ --> cf2a9a96a85804557a8d2c81534d470d3dd03b60aa871c8f51e970064ac46071:8:19
+  |
+8 | self.receiverRef = acct.getCapability<&{MyNFTContract.NFTReceiver}>(/public/NFTReceiver)
+  |                    ^
+
+error: cannot infer type parameter: `T`
+  --> cf2a9a96a85804557a8d2c81534d470d3dd03b60aa871c8f51e970064ac46071:12:17
+   |
+12 | self.minterRef = acct.borrow<&MyNFTContract.NFTMinter>(from: /storage/NFTMinter)
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+Status		 SEALED
+ID		cf2a9a96a85804557a8d2c81534d470d3dd03b60aa871c8f51e970064ac46071
+Payer		f8d6e0586b0a20c7
+Authorizers	[f8d6e0586b0a20c7]
+
+Proposal Key:	
+    Address	f8d6e0586b0a20c7
+    Index	0
+    Sequence	2
+
+No Payload Signatures
+
+Envelope Signature 0: f8d6e0586b0a20c7
+Signatures (minimized, use --include signatures)
+
+Events:	 None
+
+
+Code (hidden, use --include code)
+
+Payload (hidden, use --include payload)

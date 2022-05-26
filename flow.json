@@ -1,0 +1,31 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"MyNFTContract": "./contracts/MyNFTContract.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "d9cd15bb157158b9d6ca9278687f2517669eea1ce76b29ddf89cb77782184406",
+			"privateKey": "3635cd6ce1c715054ce5a21d56534e8a1d1e9bdf51fcc1e50d4f4f02052cebc1",
+            "chain": "flow-emulator",
+            "sigAlgorithm": "ECDSA_P256",
+            "hashAlgorithm": "SHA3_256"
+		}
+	},
+	"deployments": {
+		"emulator" : {
+			"emulator-account" : ["MyNFTContract"]
+		}
+	}
+}
